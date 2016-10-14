@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>news</title>
+	<link rel="stylesheet" href="css/mcommon.css">
+	<link rel="stylesheet" href="css/newscms.css">
+</head>
+<body>
+	<header class="header">
+		<img class="op-lt" src="img/logo.png" alt=""/>
+		<h1>Opera Publisher Dashborad</h1>
+		<div class="user op-rt">user</div>
+	</header>
+	<nav class="nav op-lt">
+		<ul class="nav-click">
+			<li><a href="home.html">Homepage</a></li>
+			<li class="checked">Sources</li>
+			<li><a href="analysis.html">Data Analysis</a></li>
+			<li><a href="revenue.html">Revenue</a></li>
+		</ul>
+	</nav>
+	<main class="content">
+		<div class="source">
+			<ul class="content-nav">
+				<li class="checked">Add RSS</li>
+			</ul>
+			<form class="formRSS" onsubmit="return false">
+				<h2>RSS URL</h2>
+				<p><input class="rssurl" type="text" placeholder="Please don't add urls of single articles"/></p>
+				<h2>RSS Types</h2>
+				<p class="radiop">
+					<input type="radio" checked name="rsstype"/>
+					<label>RSS Abstract</label>
+					<span>Titles and abstract only</span>
+					<span class="eg">Examples</span>
+				</p>
+				<p class="radiop">
+					<input type="radio" name="rsstype"/>
+					<label>RSS Full</label>
+					<span>Full articles</span>
+					<span class="eg">Examples</span>
+				</p>
+				<p class="radiop">
+					<input type="radio" name="rsstype"/>
+					<label>RSS List</label>
+					<span>Domain websites and other urls</span>
+					<span class="eg">Examples</span>
+				</p>
+				<p><span class="eg read">Read more about</span><a href="">《RSS privacy and terms》</a></p>
+				<p class="buttonp">
+					<button class="submit sure">Submit</button>
+					<button>Preview</button>
+					<button>Cancel</button>
+				</p>
+			</form>
+			<div class="alertBox">
+				<div>
+					<p>Congratulations! Your RSS has been submitted. Opera News will utilize a range of techniques to distribute your content on our multiple platforms.</p>
+					<p>Once your content sources are online, you could monitor the viewership and relative data in the 'Data Analysis' section.</p>
+					<p class="buttonp"><button class="close sure">Got it!</button></p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="cover"></div>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		// function liClicked(_this,odiv){
+		// 	if(!$(_this).hasClass('checked')){
+		// 		$(_this).parent().find('li.checked').removeClass('checked');
+		// 		$(_this).addClass('checked');
+		// 		$('.' + odiv +'>div').hide().eq($(_this).index()).show();
+		// 	}
+		// }
+		// $('.nav-click>li').on('click',function(){
+		// 	liClicked(this,'source');
+		// });
+		$('.submit').on('click',function(){
+			$('.cover').show();
+			$(this).parents('form').next().css('display','table');
+		});
+		$('.close').on('click',function(){
+			$('.cover').hide();
+			$('.alertBox').hide();
+		});
+		$('.radiop').on('click',function(){
+			$(this).find('input:radio').click();
+		});
+		$('input:radio').on('click',function(event){
+			event.stopPropagation();
+		});
+		$('input:radio[name="ads"]').on('click',function(event){
+			event.stopPropagation();
+			if($(this).val()=='platform'){
+				$('#platform').show();
+			}else{
+				$('#platform').hide();
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>news</title>
+	<link rel="stylesheet" href="css/mcommon.css">
+	<link rel="stylesheet" href="css/newscms.css">
+</head>
+<body>
+	<header class="header">
+		<img class="op-lt" src="img/logo.png" alt=""/>
+		<h1>Opera Publisher Dashborad</h1>
+		<div class="user op-rt">user</div>
+	</header>
+	<nav class="nav op-lt">
+		<ul class="nav-click">
+			<li><a href="home.html">Homepage</a></li>
+			<li><a href="sources.html">Sources</a></li>
+			<li class="checked">Data Analysis</li>
+			<li><a href="revenue.html">Revenue</a></li>
+		</ul>
+	</nav>
+	<main class="content">
+		<div class="analysis">
+			<ul class="content-nav analysis-nav">
+				<li>Statistics</li>
+				<li>Content Management</li>
+				<li class="checked">Content Monitor</li>
+			</ul>
+			<div class="analysisContent">
+				<div class="statistics">
+					<div class="table-name">
+						<span class="op-lt"></span>
+						<span class="op-rt">Export to Excel</span>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<td>Date</td>
+								<td>Articles</td>
+								<td>Recommendations</td>
+								<td>Reached Users</td>
+								<td>Viewership</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2016-09-21</td>
+								<td>19</td>
+								<td>16</td>
+								<td>16896</td>
+								<td>3450</td>
+							</tr>
+							<tr>
+								<td>2016-09-20</td>
+								<td>17</td>
+								<td>13</td>
+								<td>15876</td>
+								<td>2986</td>
+							</tr>
+							<tr>
+								<td>2016-09-19</td>
+								<td>19</td>
+								<td>16</td>
+								<td>16896</td>
+								<td>3450</td>
+							</tr>
+							<tr>
+								<td>2016-09-18</td>
+								<td>19</td>
+								<td>16</td>
+								<td>16896</td>
+								<td>3450</td>
+							</tr>
+							<tr>
+								<td>2016-09-17</td>
+								<td>19</td>
+								<td>16</td>
+								<td>16896</td>
+								<td>3450</td>
+							</tr>
+							<tr>
+								<td>2016-09-16</td>
+								<td>19</td>
+								<td>16</td>
+								<td>16896</td>
+								<td>3450</td>
+							</tr>
+							<tr>
+								<td>2016-09-15</td>
+								<td>19</td>
+								<td>16</td>
+								<td>16896</td>
+								<td>3450</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="management"></div>
+				<div class="monitor" style="display:block;">
+					<form class="formRSS" onsubmit="return false">
+						<h2>track script<span>(Optional)</span></h2>
+						<textarea name="script" id="" rows="5" placeholder="Enter track script here"></textarea>
+						<h2>Please choose your tools:</h2>
+						<p class="radiop">
+							<input type="radio" checked name="tools"/>
+							<label>JethroData</label>
+						</p>
+						<p class="radiop">
+							<input type="radio" name="tools"/>
+							<label>SlamData</label>
+						</p>
+						<p class="radiop">
+							<input type="radio" name="tools"/>
+							<label>Talena</label>
+						</p>
+						<p><span class="eg read">To check the track script terms&pricacy please click</span><a href="">《track script terms》</a></p>
+						<p class="buttonp">
+							<button class="submit sure">Submit</button>
+							<button>Cancel</button>
+						</p>
+					</form>
+					<div class="alertBox">
+						<div>
+							<p>Your track script has been submitted, once your content has been recommended on Opera News, the viewership and relative data could be&nbsp monitored by the third-party data analysis tools.</p>
+							<p class="buttonp"><button class="close sure">Got it!</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="cover"></div>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		function liClicked(_this,odiv){
+			if(!$(_this).hasClass('checked')){
+				$(_this).parent().find('li.checked').removeClass('checked');
+				$(_this).addClass('checked');
+				$('.' + odiv +'>div').hide().eq($(_this).index()).show();
+			}
+		}
+		$('.analysis-nav>li').on('click',function(){
+			liClicked(this,'analysisContent')
+		});
+		$('.submit').on('click',function(){
+			$('.cover').show();
+			$(this).parents('form').next().css('display','table');
+		});
+		$('.close').on('click',function(){
+			$('.cover').hide();
+			$('.alertBox').hide();
+		});
+		$('.radiop').on('click',function(){
+			$(this).find('input:radio').click();
+		});
+		$('input:radio').on('click',function(event){
+			event.stopPropagation();
+		});
+		$('input:radio[name="ads"]').on('click',function(event){
+			event.stopPropagation();
+			if($(this).val()=='platform'){
+				$('#platform').show();
+			}else{
+				$('#platform').hide();
+			}
+		});
+	</script>
+</body>
+</html>

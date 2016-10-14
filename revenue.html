@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>news</title>
+	<link rel="stylesheet" href="css/mcommon.css">
+	<link rel="stylesheet" href="css/newscms.css">
+</head>
+<body>
+	<header class="header">
+		<img class="op-lt" src="img/logo.png" alt=""/>
+		<h1>Opera Publisher Dashborad</h1>
+		<div class="user op-rt">user</div>
+	</header>
+	<nav class="nav op-lt">
+		<ul class="nav-click">
+			<li><a href="home.html">Homepage</a></li>
+			<li><a href="sources.html">Sources</a></li>
+			<li><a href="analysis.html">Data Analysis</a></li>
+			<li class="checked">Revenue</li>
+		</ul>
+	</nav>
+	<main class="content">
+		<div class="Revenue">
+			<ul class="content-nav revenue-nav">
+				<li class="checked">Account</li>
+				<li>Setting</li>
+				<li>Revenue</li>
+			</ul>
+			<div class="revenueContent">
+				<div class="account" style="display:block;">
+					<div class="infobox">
+						<div class="info">
+							<select name="city">
+								<option value="USA">USA</option>
+								<option value="aaa">aaa</option>
+								<option value="bbb">bbb</option>
+								<option value="ccc">ccc</option>
+							</select>
+							<p>
+								<span>All</span>
+								<span>7 days</span>
+								<span>14 days</span>
+								<span>30 days</span>
+							</p>
+							<p>2016-09-15 to 2016-09-21</p>
+							<img src="img/search.png" alt="">
+						</div>
+						<ul class="total-result">
+							<li class="op-lt block"><span>$29.8</span><span>Revenue</span></li>
+							<li class="op-lt block"><span>1125</span><span>Impressions</span></li>
+							<li class="op-lt block"><span>135</span><span>Clicks</span></li>
+							<li class="op-lt block"><span>1.2%</span><span>Average Clicks</span></li>
+						</ul>
+					</div>
+					<div class="table-name">
+						<span class="op-lt">Statistics</span>
+						<span class="op-rt">Export to Excel</span>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<td>Date</td>
+								<td>Impressions</td>
+								<td>Clicks</td>
+								<td>CTR</td>
+								<td>ecpm</td>
+								<td>Income</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2016-09-21</td>
+								<td>1976</td>
+								<td>16</td>
+								<td>1.3%</td>
+								<td>$7.16</td>
+								<td>$3.4</td>
+							</tr>
+							<tr>
+								<td>2016-09-20</td>
+								<td>1744</td>
+								<td>13</td>
+								<td>1.1%</td>
+								<td>$7.09</td>
+								<td>$3.1</td>
+							</tr>
+							<tr>
+								<td>2016-09-19</td>
+								<td>1965</td>
+								<td>16</td>
+								<td>1.3%</td>
+								<td>$6.95</td>
+								<td>$3.3</td>
+							</tr>
+							<tr>
+								<td>2016-09-18</td>
+								<td>1912</td>
+								<td>10</td>
+								<td>1.3%</td>
+								<td>$6.87</td>
+								<td>$2.9</td>
+							</tr>
+							<tr>
+								<td>2016-09-17</td>
+								<td>1909</td>
+								<td>19</td>
+								<td>1.3%</td>
+								<td>$6.91</td>
+								<td>$2.9</td>
+							</tr>
+							<tr>
+								<td>2016-09-16</td>
+								<td>1504</td>
+								<td>16</td>
+								<td>1.1%</td>
+								<td>$7.03</td>
+								<td>$3.1</td>
+							</tr>
+							<tr>
+								<td>2016-09-15</td>
+								<td>1998</td>
+								<td>35</td>
+								<td>2.6%</td>
+								<td>$7.01</td>
+								<td>$3.2</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="setting">
+					<form class="formRSS form" onsubmit="return false">
+						<h2>Advertisement</h2>
+						<p class="radiop">
+							<input type="radio" checked name="ads"/>
+							<label>No Ads</label>
+						</p>
+						<p class="radiop">
+							<input type="radio" name="ads"/>
+							<label>Ads of Opera News</label>
+							<span>(Opera news matches Ads to relative contents)</span>
+						</p>
+						<p class="radiop">
+							<input type="radio" name="ads" value="platform"/>
+							<label>Ads from other platform</label>
+							<span>(Support Google,Facebook and Twitter for now)</span>
+						</p>
+						<div class="radiobox mar" id="platform">
+							<h2>Choose your platform:</h2>
+							<p class="radiop">
+								<input type="radio" name="platform"/>
+								<label>Google</label>
+							</p>
+							<p class="radiop">
+								<input type="radio" name="platform"/>
+								<label>Facebook</label>
+							</p>
+							<p class="radiop">
+								<input type="radio" checked name="platform"/>
+								<label>Twitter</label>
+							</p>
+						</div>
+						<h2>track script<span>(Optional)</span></h2>
+						<div class="mar">
+							<textarea name="script" id="" rows="5" placeholder="Enter track script here"></textarea>
+							<div class="radiobox">
+								<h2>Choose your tools:</h2>
+								<p class="radiop">
+									<input type="radio" checked name="tools"/>
+									<label>JethroData</label>
+								</p>
+								<p class="radiop">
+									<input type="radio" name="tools"/>
+									<label>SlamData</label>
+								</p>
+								<p class="radiop">
+									<input type="radio" name="tools"/>
+									<label>Talena</label>
+								</p>
+							</div>
+							<p><span class="eg read">To check the track script terms&pricacy please click</span><a href="">《track script terms》</a></p>
+						</div>
+						<p class="buttonp">
+							<button class="submit sure">Submit</button>
+							<button>Cancel</button>
+						</p>
+					</form>
+					<!-- <div class="alertBox">
+						<div>
+							<p>Your track script has been submitted, once your content has been recommended on Opera News, the viewership and relative data could be&nbsp monitored by the third-party data analysis tools.</p>
+							<p class="buttonp"><button class="close sure">Got it!</button></p>
+						</div>
+					</div> -->
+				</div>
+				<div class="revenue">
+					<div class="total-content form">
+						<p class="op-lt block submit">
+							<span>$165</span><span>Cashing Request</span>
+						</p>
+						<ul>
+							<li class="op-lt block"><span>125</span><span>Total Revenue</span></li>
+							<li class="op-lt block"><span>104</span><span>Total Revenue (AT)</span></li>
+							<li class="op-lt block"><span>97645</span><span>Cashable (AT)</span></li>
+						</ul>
+					</div>
+					<div class="alertBox">
+						<div>
+							<h2>Cashing Request</h2>
+							<p>The amount of your cashing request is <i>$2645</i>. Opera News will contact you in 24 hours <br/>(working days) once your request is sent.</p>
+							<p class="buttonp">
+								<button class="close">Cancel</button>
+								<button class="close sure">Send Request</button>
+							</p>
+						</div>
+					</div>
+					<div class="table-name">
+						<span class="op-lt">Cashing Records</span>
+						<span class="op-rt">Export to Excel</span>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<td>Date</td>
+								<td>Total Revenue</td>
+								<td>Tax</td>
+								<td>Payment (AT)</td>
+								<td>Statues</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2016-09-21</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+							<tr>
+								<td>2016-09-20</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+							<tr>
+								<td>2016-09-19</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+							<tr>
+								<td>2016-09-18</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+							<tr>
+								<td>2016-09-17</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+							<tr>
+								<td>2016-09-16</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+							<tr>
+								<td>2016-09-15</td>
+								<td>$456</td>
+								<td>$34</td>
+								<td>$422</td>
+								<td>Succeed</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="cover"></div>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		function liClicked(_this,odiv){
+			if(!$(_this).hasClass('checked')){
+				$(_this).parent().find('li.checked').removeClass('checked');
+				$(_this).addClass('checked');
+				$('.' + odiv +'>div').hide().eq($(_this).index()).show();
+			}
+		}
+		$('.revenue-nav>li').on('click',function(){
+			liClicked(this,'revenueContent')
+		});
+		$('.submit').on('click',function(){
+			$('.cover').show();
+			$(this).parents('.form').next().css('display','table');
+		});
+		$('.close').on('click',function(){
+			$('.cover').hide();
+			$('.alertBox').hide();
+		});
+		$('.radiop').on('click',function(){
+			$(this).find('input:radio').click();
+		});
+		$('input:radio').on('click',function(event){
+			event.stopPropagation();
+		});
+		$('input:radio[name="ads"]').on('click',function(event){
+			event.stopPropagation();
+			if($(this).val()=='platform'){
+				$('#platform').show();
+			}else{
+				$('#platform').hide();
+			}
+		});
+	</script>
+</body>
+</html>
