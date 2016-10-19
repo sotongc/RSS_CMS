@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Opera Publisher Dashboard</title>
+	<link rel="stylesheet" href="css/mcommon.css">
+	<link rel="stylesheet" href="css/newscms.css">
+	<link rel="stylesheet" href="css/froala_editor.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"/>
+</head>
+<body>
+	<header class="header">
+		<img class="op-lt" src="img/logo.png" alt=""/>
+		<h1>Opera Publisher Dashborad</h1>
+		<div class="user op-rt">user</div>
+	</header>
+	<nav class="nav op-lt">
+		<ul class="nav-click">
+			<li><a href="authority.html">Publisher</a></li>
+			<li class="checked">Newsletters</li>
+			<li><a href="accounting.html">Accounting</a></li>
+		</ul>
+	</nav>
+	<main class="content">
+		<div class="source">
+			<ul class="content-nav">
+				<li class="checked">Newsletters</li>
+			</ul>
+			<div class="newsletter">
+				<input type="text" placeholder="Title" class="nl-title"/>
+				<div id="editor"></div>
+				<p class="buttonp">
+					<button class="sure">Save</button>
+					<button>Cancel</button>
+				</p>
+			</div>
+		</div>
+	</main>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/froala_editor.min.js"></script>
+	<script>
+		$("#editor").froalaEditor({height:351})
+	</script>
+</body>
+</html>
